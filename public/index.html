@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,37 @@
   <title>Document</title>
   <link rel="stylesheet" href="/build/tailwind.css">
 </head>
-<body>
-  <h1 class="text-4xl font-bold text-center text-blue-500">Hello world</h1>
+
+<body class="bg-gray-100">
+  <div class="flex">
+    <div class="px-8 py-12 max-w-md mx-auto sm:max-w-xl">
+      <img class="h-10"
+        src="data:image/png;base64,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"
+        alt="Workation" />
+      <img class="mt-6 rounded-lg shadow-xl sm:mt-8 sm:h-64 sm:w-full sm:object-cover sm:object-center"
+        src="https://media.fshoq.com/images/167/woman-on-swing-caribbean-beach-and-sea-167-small.jpg"
+        alt="Woman on beach" />
+      <h1 class="mt-6 text-2xl font-bold text-gray-900 leading-tight sm:text-4xl sm:mt-8">
+        You can work from anywhere.
+        <span class="text-indigo-500">Take advantage of it.</span>
+      </h1>
+      <p class="mt-2 text-gray-600 sm:text-xl sm:mt-4">
+        Workation helps you find work-friendly rentals in beautiful locations so you can enjoy some nice weather even
+        when
+        you're not on vacation.
+      </p>
+      <div class="mt-4 sm:mt-6">
+        <a href="#"
+          class="inline-block px-5 py-3 shadow-lg bg-indigo-500 text-sm text-white rounded-lg uppercase tracking-wider font-semibold sm:text-base">Book
+          your escape</a>
+      </div>
+    </div>
+    <div>
+      <img class="mt-6 rounded-lg shadow-xl sm:mt-8 sm:h-64 sm:w-full sm:object-cover sm:object-center"
+        src="https://media.fshoq.com/images/167/woman-on-swing-caribbean-beach-and-sea-167-small.jpg"
+        alt="Woman on beach" />
+    </div>
+  </div>
 </body>
+
 </html>
