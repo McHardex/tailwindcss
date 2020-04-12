@@ -59,6 +59,7 @@
   </div>
 
   <script>
+    const randomImage = "https://picsum.photos/1024/720/?random&t=" + new Date().getTime() +")";
     Vue.component('destinationcard', {
       name: 'DestinationCard',
       props: {
@@ -68,7 +69,7 @@
       },
       template: `
       <div class="flex items-center rounded-lg bg-white shadow-lg overflow-hidden">
-        <img class="h-32 w-32 flex-shrink-0" :src="destination.imageUrl" :alt="destination.imageAlt">
+        <img class="h-32 w-32 flex-shrink-0 object-cover object-center" :src="destination.imageUrl" :alt="destination.imageAlt">
         <div class="px-6 py-4">
           <h3 class="text-lg font-semibold text-gray-800">{{ destination.city }}</h3>
           <p class="text-gray-600">{{ destination.averagePrice }} / night average</p>
@@ -87,42 +88,42 @@
             city: 'Toronto',
             averagePrice: 120,
             propertyCount: 76,
-            imageUrl: 'https://picsum.photos/seed/{seed}/1024/720',
+            imageUrl: randomImage,
             imageAlt: 'Toronto skyline',
           },
           {
             city: 'Malibu',
             averagePrice: 215,
             propertyCount: 43,
-            imageUrl: 'https://picsum.photos/seed/{seed}/1024/720',
+            imageUrl: randomImage,
             imageAlt: 'Cliff in Malibu',
           },
           {
             city: 'Chicago',
             averagePrice: 130,
             propertyCount: 115,
-            imageUrl: 'https://picsum.photos/seed/{seed}/1024/720',
+            imageUrl: randomImage,
             imageAlt: 'Chicago skyline',
           },
           {
             city: 'Seattle',
             averagePrice: 135,
             propertyCount: 63,
-            imageUrl: 'https://picsum.photos/seed/{seed}/1024/720',
+            imageUrl: randomImage,
             imageAlt: 'Seattle skyline',
           },
           {
             city: 'Colorado',
             averagePrice: 85,
             propertyCount: 47,
-            imageUrl: 'https://picsum.photos/seed/{seed}/1024/720',
+            imageUrl: randomImage,
             imageAlt: 'Lake in Colorado',
           },
           {
             city: 'Miami',
             averagePrice: 115,
             propertyCount: 86,
-            imageUrl: 'https://picsum.photos/seed/{seed}/1024/720',
+            imageUrl: randomImage,
             imageAlt: 'Beach in Miami',
           },
         ]
