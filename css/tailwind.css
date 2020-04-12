@@ -2,23 +2,27 @@
 @tailwind components;
 
 .btn {
-  @apply inline-block px-5 py-3 shadow-lg bg-indigo-500 bg-green-400 text-sm text-white rounded-lg uppercase tracking-wider font-semibold;
+  @apply inline-block px-5 py-3 bg-green-400 text-sm rounded-lg uppercase tracking-wider font-semibold;
 }
 
-.btn:hover {
-  @apply bg-indigo-400;
-}
 .btn:focus {
   @apply outline-none shadow-outline;
 }
-.btn {
-  @apply bg-indigo-600;
+
+.btn-indigo {
+  @apply bg-indigo-500 text-white;
 }
 
-@screen sm {
-  .btn {
-    @apply text-base;
-  }
+.btn-gray {
+  @apply bg-gray-400 text-gray-800;
+}
+
+.btn-indigo:hover {
+  @apply bg-indigo-400;
+}
+
+.btn-gray:hover {
+  @apply bg-gray-300;
 }
 
 @tailwind utilities;
